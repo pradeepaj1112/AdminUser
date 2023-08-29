@@ -1,0 +1,57 @@
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.modal-body {
+  .form-group {
+    margin-bottom: 20px;
+
+    label.font-weight-bold {
+      display: block;
+    }
+
+    input.form-control,
+    select.form-select {
+      width: 100%;
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  button.btn-secondary {
+    margin-right: 10px;
+  }
+
+  button.btn-primary {
+    background-color: rgb(27, 101, 206);
+    color: white;
+  }
+
+  button.btn-secondary[data-bs-dismiss="modal"] {
+    color: #666;
+  }
+}
+
+.card {
+  margin-top: 20px;
+  width: 100%;
+
+  img.card-img-top {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    p.card-text {
+      text-align: center;
+    }
+  }
+}

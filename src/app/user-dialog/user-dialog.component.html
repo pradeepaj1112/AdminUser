@@ -1,0 +1,37 @@
+<h2 class="modal-title">Add User</h2>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="name" class="font-weight-bold">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="name">
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="font-weight-bold">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email">
+  </div>
+
+  <div class="form-group">
+    <label for="position" class="font-weight-bold">Position</label>
+    <select class="form-select" id="position" [(ngModel)]="position">
+      <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="clearFields()">Clear</button>
+    <button type="button" class="btn btn-primary" (click)="closeModal()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  </div>
+  
+
+<div *ngFor="let employee of employeeDetails" class="card">
+  <img src="/assets/person.png" class="card-img-top" alt="profile">
+  <div class="card-body">
+    <p class="card-text text-center">
+      {{ employee.name }}<br>
+      {{ employee.email }}<br>
+      {{ employee.position }}
+    </p>
+  </div>
+</div>

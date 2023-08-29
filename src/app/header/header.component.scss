@@ -1,0 +1,48 @@
+.navbar {
+  border-color: none;
+  height: 70px;
+
+  .navbar-brand {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+
+  }
+
+  .navheader-link,
+  .nav-link,
+  .logout-button {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+
+  }
+
+  .navbar-brand {
+    margin-top: -10px;
+  }
+
+  .nav-link {
+    margin-top: -38px;
+    margin-left: 90rem;
+  }
+
+  .navheader-link {
+    margin-top: -30px;
+    margin-left: 80rem;
+
+  }
+
+  img {
+    filter: invert(1);
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+  }
+
+
+}
+
+.no-underline {
+  text-decoration: none;
+}

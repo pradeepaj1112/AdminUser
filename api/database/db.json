@@ -1,0 +1,30 @@
+{
+    "auth": [
+        
+        {
+            "name": "pradeepa",
+            "username": "admin@gmail.com",
+            "password": "hgdfsd",
+            "position": "Manager"
+        },
+       
+        {
+            "name": "pradeepa",
+            "username": "admin@gmail.com",
+            "password": "ijhgf",
+            "position": "Manager"
+        },
+        {
+            "name": "pradeepa",
+            "username": "deepajp1112@gmail.com",
+            "password": "thrgfsd",
+            "position": "Designer"
+        },
+        {
+            "name": "pradeepa",
+            "username": "deepajpAdmin@gmail.com",
+            "password": "passWORD@123",
+            "position": "Designer"
+        }
+    ]
+}
