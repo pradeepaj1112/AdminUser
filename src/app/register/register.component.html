@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <button class="btn btn-link back-button no-underline" (click)="goToLogin()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <div class="text-center">
+          <h1>Sign Up</h1>
+          <h6>Employee Registration</h6>
+        </div>
+        <div class="alert alert-success mt-3" *ngIf="registrationSuccessful">
+          Your registration was successful! You can now log in.
+        </div>
+        <form #signupForm="ngForm" (ngSubmit)="register()">
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Full Name<span class="text-danger"> *</span></label>
+            <input type="text" class="form-control" id="exampleInputName" name="Name" [(ngModel)]="name" required>
+          </div>
+          <!-- <div class="mb-3">
+            <label for="exampleInputEmployeeId" class="form-label">Employee Id<span class="text-danger"> *</span></label>
+            <input type="text" class="form-control" id="exampleInputEmployeeId" name="EmployeeId"
+              [(ngModel)]="EmployeeId" (input)="onEmployeeIdInput()" [class.is-invalid]="employeeIdError" required />
+            <div *ngIf="employeeIdError" class="invalid-feedback">Only numbers are allowed.</div>
+          </div> -->
+          <div class="mb-3">
+            <label for="exampleInputPosition" class="form-label">Position</label>
+            <select class="form-select" id="exampleInputPosition" name="Position" [(ngModel)]="position" required>
+              <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address <span class="text-danger"> *</span></label>
+            <input type="email" class="form-control" name="EmailAddress" [(ngModel)]="EmailAddress"
+                   (input)="validateInput()" [class.is-invalid]="validateInputerror" required/>
+            <div *ngIf="validateInputerror" class="invalid-feedback">Invalid Input</div>
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Password<span class="text-danger"> *</span></label>
+            <input type="password" class="form-control" id="exampleInputPassword" name="password" [(ngModel)]="password"
+              required>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid || isInvalidInput || validateInputerror">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

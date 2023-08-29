@@ -1,0 +1,17 @@
+<div class="main-content">
+  <button class="top-button" (click)="openUserDialog()">
+    <i class="fas fa-user-plus"></i> Add User
+  </button>
+  <div class="card-container">
+    <div class="card" *ngFor="let employee of employeeDetails">
+      <img src="/assets/person.png" class="card-img-top" alt="Profile">
+      <div class="card-body">
+        <p class="card-text align-center">
+          {{ employee.name }}<br>
+          {{ employee.position }}<br>
+          {{ employee.email }}
+         
+        </p>
+      </div>
+    </div>
+  </div>

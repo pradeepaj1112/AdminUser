@@ -1,0 +1,22 @@
+
+<div class="dashboard-container">
+  <div class="side-navbar">
+    <ul>
+      <li><a routerLink="/dashboard"><i class="custom-icon fi fi-rr-home"></i> Home</a></li>
+      <li><a href="employee-details">Employee Details</a></li>
+      <li><a href="calender">calender</a></li>
+      <li><a routerLink="/login">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="row col-sm-8">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card card-lg">
+          <div class="card-body">
+            <h5 class="card-title">Time</h5>
+            <p class="card-text large-text" [innerHTML]="currentTime"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>

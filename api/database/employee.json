@@ -1,0 +1,19 @@
+{
+    "employees": [
+        {
+            "name": "John Doe",
+            "email": "john@example.com",
+            "jobTitle": "Software Engineer"
+        },
+        {
+            "name": "Jane Smith",
+            "email": "jane@example.com",
+            "jobTitle": "UX Designer"
+        },
+        {
+            "name": "Mike Johnson",
+            "email": "mike@example.com",
+            "jobTitle": "Product Manager"
+        }
+    ]
+}
