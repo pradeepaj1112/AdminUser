@@ -1,33 +1,31 @@
-
 <div class="dashboard-container">
-    <div class="side-navbar">
-      <ul>
-        <li><a routerLink="/employee-dashboard"><i class="custom-icon fi fi-rr-home"></i> Home</a></li>
-        <li><a routerLink="/employee-dashboard">Personal Details</a></li>
-        <li><a routerLink="/login">Logout</a></li>
-
-      </ul>
-    </div>
-    <div class="main-content">
-      <div class="row col-sm-8">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <div class="card card-lg">
-            <div class="card-body">
-              <h5 class="card-title">Time</h5>
-              <p class="card-text large-text" [innerHTML]="currentTime"></p>
-            </div>
+  <div class="side-navbar">
+    <ul class="navigation-list">
+      <li><a routerLink="/employee-dashboard"><img src="assets/home .png" alt="Home" class="small-icon"> Home</a></li>
+      <li><a routerLink="/personal-details"><img src="assets/user-avatar .png" alt="Home" class="small-icon">Personal Details</a></li>
+      <li><a routerLink="/about"><img src="assets/About.png" alt="about" class="small-icon"> About</a></li>
+        <li><a routerLink="/logout"><img src="assets/power-off.png" alt="logout" class="small-icon" (click)="openLogoutDialog()"> Logout</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="row col-sm-8">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card card-lg">
+          <div class="card-body">
+            <h5 class="card-title">Time</h5>
+            <p class="card-text large-text" [innerHTML]="currentTime"></p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card card-lg">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h6 class="card-subtitle mb-2 text-muted"></h6>
-              <p class="card-text"></p>
-            </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-lg">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

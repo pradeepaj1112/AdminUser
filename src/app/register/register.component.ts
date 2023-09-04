@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../Service/auth.service';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -19,16 +19,21 @@ export class RegisterComponent {
   showAlert: boolean = false;
   employeeIdError: boolean = false;
   isInvalidInput: boolean = false;
+  registrationSuccessful: boolean = false;
   emailFormControl: FormControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(private router: Router, private authService: AuthService) { }
-
-  positions: string[] = ["Software Engineer", "Manager", "Designer","Product Engineer"];
-
+  
+  passwordPattern: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  positions: string[] = ["Software Engineer","Administration", "Manager", "Designer","Product Engineer"];
+  isPasswordValid(): boolean {
+    return this.passwordPattern.test(this.password);
+    
+  }
   goToLogin() {
     this.router.navigate(['/login']);
   }
-  registrationSuccessful: boolean = false;
+ 
 
   register() {
     this.logEnteredDetails();
@@ -47,7 +52,6 @@ export class RegisterComponent {
   //   this.employeeIdError = !/^\d*$/.test(this.EmployeeId);
   // }
   validateInput() {
-    const email = this.EmailAddress;
     const gmailPattern = /.+@gmail\.com/;
     this.validateInputerror = !gmailPattern.test(this.EmailAddress);
     //this.isInvalidInput = email.toLowerCase().includes('admin');

@@ -1,0 +1,26 @@
+/* styles.scss */
+.custom-dialog-content {
+    height:200px;
+    width:350px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; 
+  }
+  
+  .btn-close {
+    //position: absolute;
+    top: 1;
+    margin-left: 250px;
+    border-color: none;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -20,9 +21,11 @@ export class UserDialogComponent implements OnInit {
   email: string = '';
   position: string = '';
   employeeDetails: any = [];
-  positions: string[] = ["Software Engineer", "Manager", "Designer", "Product Engineer"];
+  positions: string[] = ["Software Engineer", "Manager", "Designer", "Product Engineer","Administrator"];
 
-
+  get formValid() {
+    return this.name && this.email && this.position;
+  }
   onSubmit() {
     const newEmployee = {
       name: this.name,
@@ -40,5 +43,8 @@ export class UserDialogComponent implements OnInit {
     closeModal(): void {
       this.dialogRef.close();
     }
+    isEmailInvalid(emailInput: NgModel) {
+      return emailInput?.invalid && emailInput?.dirty;
+  }
 
   }

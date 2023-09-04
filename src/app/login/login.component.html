@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <div class="card">
+      <div class="card float-left">
         <div class="text-center">
           <h1>Login</h1>
         </div>
@@ -9,28 +9,34 @@
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">UserName<span class="text-danger"> *</span></label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              name="username" [(ngModel)]="username" required>
+              name="username" [(ngModel)]="username" (input)="validateInput()" [class.is-invalid]="validateInputerror"
+              required>
+            <div *ngIf="validateInputerror" class="invalid-feedback">Invalid Input</div>
           </div>
+          
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password<span class="text-danger"> *</span></label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password"
-              [(ngModel)]="password" required>
+                   [(ngModel)]="password" required [pattern]="passwordPattern">
+            <div *ngIf="password && !isPasswordValid()" class="invalid-feedback">
+              Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character,
+              and be at least 8 characters long.
+            </div>
           </div>
-
-          <div class="alert alert-danger" role="alert" *ngIf="showAlert">
+          
+          <!-- <div class="alert alert-danger" role="alert" *ngIf="showAlert">
             Please enter both email and password.
-          </div>
+          </div> -->
 
-          <button type="submit" class="btn btn-primary" [disabled]="!username || !password"
+          <button type="submit" class="btn btn-primary" [disabled]="!username || !password || validateInputerror"
             (click)="validateForm()">Login</button>
         </form>
         <br>
 
         <p class="text-center">
-          
           New user? <a class="no-underline" routerLink="/register">Register here</a>
         </p>
-        
+
       </div>
     </div>
   </div>

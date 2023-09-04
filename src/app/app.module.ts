@@ -12,8 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './auth.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthService } from './Service/auth.service';
 import { DatePipe } from '@angular/common';
 import { CalenderComponent } from './calender/calender.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -25,8 +25,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
-import { LogoutComponent } from './logout/logout.component';
 import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './guards/authguard.guard';
+import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +43,10 @@ import { AboutComponent } from './about/about.component';
     UserDialogComponent,
     NotFoundComponent,
     HeaderComponent,
-    LogoutComponent,
+    LogoutDialogComponent,
     AboutComponent,
+    FooterComponent,
+    HomeComponent
  
 
   ],
@@ -64,7 +69,9 @@ import { AboutComponent } from './about/about.component';
   ],
   providers: [
     AuthService,
-    DatePipe
+    DatePipe,
+    AuthGuard,
+  
   ],
   bootstrap: [AppComponent]
 })

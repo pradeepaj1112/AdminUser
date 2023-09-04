@@ -15,7 +15,8 @@
         <form #signupForm="ngForm" (ngSubmit)="register()">
           <div class="mb-3">
             <label for="exampleInputName" class="form-label">Full Name<span class="text-danger"> *</span></label>
-            <input type="text" class="form-control" id="exampleInputName" name="Name" [(ngModel)]="name" required>
+            
+            <input type="text" class="form-control" id="exampleInputName" name="Name" [(ngModel)]="name" required />
           </div>
           <!-- <div class="mb-3">
             <label for="exampleInputEmployeeId" class="form-label">Employee Id<span class="text-danger"> *</span></label>
@@ -26,25 +27,40 @@
           <div class="mb-3">
             <label for="exampleInputPosition" class="form-label">Position</label>
             <select class="form-select" id="exampleInputPosition" name="Position" [(ngModel)]="position" required>
-              <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+              <option *ngFor="let pos of positions" [value]="pos">
+                {{ pos }}
+              </option>
             </select>
           </div>
-          
+
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address <span class="text-danger"> *</span></label>
             <input type="email" class="form-control" name="EmailAddress" [(ngModel)]="EmailAddress"
-                   (input)="validateInput()" [class.is-invalid]="validateInputerror" required/>
-            <div *ngIf="validateInputerror" class="invalid-feedback">Invalid Input</div>
+              (input)="validateInput()" [class.is-invalid]="validateInputerror" required />
+            <div *ngIf="validateInputerror" class="invalid-feedback">
+              Invalid Input
+            </div>
           </div>
-    
           <div class="mb-3">
-            <label for="exampleInputPassword" class="form-label">Password<span class="text-danger"> *</span></label>
-            <input type="password" class="form-control" id="exampleInputPassword" name="password" [(ngModel)]="password"
-              required>
+            <label for="exampleInputPassword1" class="form-label">Password<span class="text-danger"> *</span></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+              [(ngModel)]="password" required [pattern]="passwordPattern" />
+            <div *ngIf="password && !isPasswordValid()" class="invalid-feedback">
+              Password must contain at least one uppercase letter, one lowercase
+              letter, one digit, one special character, and be at least 8
+              characters long.
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid || isInvalidInput || validateInputerror">Sign Up</button>
+          <button type="submit" class="btn btn-primary" [disabled]="
+              signupForm.invalid ||
+              isInvalidInput ||
+              validateInputerror
+            ">
+            Sign Up
+          </button>
         </form>
       </div>
     </div>
   </div>
+
 </div>

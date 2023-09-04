@@ -1,11 +1,15 @@
-
 <div class="dashboard-container">
   <div class="side-navbar">
     <ul>
-      <li><a routerLink="/dashboard"><i class="custom-icon fi fi-rr-home"></i> Home</a></li>
-      <li><a href="employee-details">Employee Details</a></li>
-      <li><a href="calender">calender</a></li>
-      <li><a routerLink="/login">Logout</a></li>
+      <ul>
+        <ul class="navigation-list">
+          <li><a routerLink="/dashboard"><img src="assets/home .png" alt="Home" class="small-icon"> Home</a></li>
+          <li><a routerLink="/employee-details"><img src="assets/user-avatar .png" alt="Employee Details" class="small-icon"> Employee Details</a></li>
+          <li><a routerLink="/calender"><img src="assets/calendar.png" alt="Calendar" class="small-icon"> Calendar</a></li>
+          <li><a routerLink="/about"><img src="assets/About.png" alt="about" class="small-icon"> About</a></li>
+          <li><a routerLink="/logout"><img src="assets/power-off.png" alt="logout" class="small-icon" (click)="openLogoutDialog()"> Logout</a></li>
+        </ul>
+      </ul>
     </ul>
   </div>
   <div class="main-content">
@@ -20,3 +24,4 @@
       </div>
 
     </div>
+  

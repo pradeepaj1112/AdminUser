@@ -1,7 +1,7 @@
 import {  TestBed } from '@angular/core/testing';
 
 import { RegisterComponent } from './register.component';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../Service/auth.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
 

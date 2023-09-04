@@ -1,7 +1,13 @@
+
+
 html{
-    background-color: rgb(250, 250, 250);
+    background-color:white;
 }
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body { height: 100%; }
+ body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-dialog-container {
+    width: 500px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+  }

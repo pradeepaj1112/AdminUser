@@ -1,13 +1,11 @@
 {
     "auth": [
-        
         {
             "name": "pradeepa",
             "username": "admin@gmail.com",
             "password": "hgdfsd",
             "position": "Manager"
         },
-       
         {
             "name": "pradeepa",
             "username": "admin@gmail.com",
@@ -17,7 +15,7 @@
         {
             "name": "pradeepa",
             "username": "deepajp1112@gmail.com",
-            "password": "thrgfsd",
+            "password": "Pradeepa@123",
             "position": "Designer"
         },
         {
@@ -25,6 +23,30 @@
             "username": "deepajpAdmin@gmail.com",
             "password": "passWORD@123",
             "position": "Designer"
+        },
+        {
+            "name": "Pradeepa Jayapal",
+            "username": "admin1@gmail.com",
+            "password": "Admin@123",
+            "position": "Administration"
+        },
+        {
+            "name": "pradeepa",
+            "username": "deepajp1112@gmail.com",
+            "password": "gfsda",
+            "position": "Administration"
+        },
+        {
+            "name": "kanini",
+            "username": "user1@gmail.com",
+            "password": "User1@123",
+            "position": "Product Engineer"
+        },
+        {
+            "name": "praveen kumar",
+            "username": "deepajp1112@gmail.com",
+            "password": "Praveen@123",
+            "position": "Software Engineer"
         }
     ]
 }

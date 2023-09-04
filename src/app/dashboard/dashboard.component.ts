@@ -1,6 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { LogoutDialogComponent } from '../logout-dialog/logout-dialog.component';
+import { Router } from '@angular/router';
+
+// Import any necessary components or services here
 
 @Component({
   selector: 'app-dashboard',
@@ -9,35 +14,36 @@ import { DatePipe } from '@angular/common';
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   count: number = 0;
-  //dataSubscription!: Subscription;
-  currentTime: string='';
-  users:any[]=[];
+  currentTime: string = '';
+  users: any[] = [];
+  
 
-
-  constructor(private http: HttpClient, private datepipe:DatePipe) {
-    this.updateTime(); 
+  constructor(private http: HttpClient, private datepipe: DatePipe,private dialog: MatDialog,private router: Router) {
+    this.updateTime();
     setInterval(() => this.updateTime(), 1000);
   }
 
-  ngOnInit():void {
-   
-   ;
+  ngOnInit(): void {
+    // Any initialization code you need
   }
 
   ngOnDestroy() {
-   // this.dataSubscription.unsubscribe();
+    // Any cleanup code you need when the component is destroyed
   }
+    openLogoutDialog(): void {
+    const dialogRef = this.dialog.open(LogoutDialogComponent);
 
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.router.navigate(['/login']); 
+      }
+    });
+  }
 
   updateTime() {
     const now = new Date();
-    const formattedTime = this.datepipe.transform(now, 'hh:mm:ss a'); 
-    const formattedDate = this.datepipe.transform(now, 'dd MMM yyyy'); // Format date
+    const formattedTime = this.datepipe.transform(now, 'hh:mm:ss a');
+    const formattedDate = this.datepipe.transform(now, 'dd MMM yyyy');
     this.currentTime = ` ${formattedTime}<br>${formattedDate}`;
   }
-  
-  }
-  
-  
-  
-
+}

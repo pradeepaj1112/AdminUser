@@ -21,7 +21,9 @@
           color: black;
         }
       }
+      
     }
+
   }
 
   .main-content {
@@ -52,3 +54,26 @@
 
 
 }
+.navigation-list {
+  list-style: none;
+  padding: 0; // Remove default padding
+  margin: 0; // Remove default margin
+
+  li {
+    margin-bottom: 20px; // Adjust this value to control the gap between list items
+  }
+  .small-icon {
+    width: 20px;
+    height: 20px;
+  }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+      .large-text {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 4rem;
+        
+      }
+    }
