@@ -48,12 +48,6 @@ app.post('/login', (req: any, res: any) => {
   }
 });
 
-app.get('/users/count', (req: any, res: any) => {
-  const rawdata = fs.readFileSync('api/database/db.json');
-  const data: any = JSON.parse(rawdata);
-  res.status(200).json({ message: 'Registered successfully' , count: data.auth.length})
-})
-
 app.post('/register', (req: any, res: any) => {
   const { name,username, password,position } = req.body;
   const rawdata = fs.readFileSync('api/database/db.json');
