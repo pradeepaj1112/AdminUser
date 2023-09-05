@@ -11,10 +11,10 @@ import { AboutComponent } from './about/about.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
-import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
-  {path:'',component:HomeComponent,canActivate:[AuthGuard]},
+  {path:'',component:LoginComponent,canActivate:[AuthGuard]},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},

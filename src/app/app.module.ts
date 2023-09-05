@@ -29,7 +29,7 @@ import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { HomeComponent } from './home/home.component';
     LogoutDialogComponent,
     AboutComponent,
     FooterComponent,
-    HomeComponent
+
  
 
   ],
