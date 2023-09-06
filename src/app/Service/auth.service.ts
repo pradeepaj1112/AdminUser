@@ -31,6 +31,7 @@ export class AuthService {
     this.isAuthenticated = false
     localStorage.removeItem('access_token');
   }
+  
  
 
 }

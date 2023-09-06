@@ -12,14 +12,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { FormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Service/auth.service';
 import { DatePipe } from '@angular/common';
 import { CalenderComponent } from './calender/calender.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { IonicModule } from '@ionic/angular';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
-import { MatOptionModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -29,7 +29,8 @@ import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { MatDatepickerModule } from '@angular/material/datepicker'; // Import for date picker
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FooterComponent } from './footer/footer.component';
 
   ],
   imports: [
+  
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
@@ -65,6 +67,9 @@ import { FooterComponent } from './footer/footer.component';
     MatOptionModule,
     MatSelectModule,
     MatIconModule, 
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
     
   ],
   providers: [

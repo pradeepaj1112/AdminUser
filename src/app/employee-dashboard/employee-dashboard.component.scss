@@ -1,8 +1,6 @@
-// styles.scss
-
 .dashboard-container {
   display: flex;
-  height: 100vh;
+  height: 120vh;
 
   .side-navbar {
     width: 250px;
@@ -21,9 +19,20 @@
           color: black;
         }
       }
-      
     }
 
+    .navigation-list {
+      list-style: none;
+
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .small-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .main-content {
@@ -33,10 +42,13 @@
     .large-text {
       font-size: 24px;
       font-weight: bold;
-      margin-left: 4rem;
+      margin-left: 4rem
     }
-
-    .card {
+    .card,
+    .card-lg {
+      width: 350px;
+      height: 250px;
+      margin-top: 50px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: 0.3s;
 
@@ -45,35 +57,10 @@
       }
     }
 
-    .card-lg {
-      width: 350px;
-      height: 250px;
-
+    .table-container {
+      margin-top: 100px;
     }
-  }
 
+  }
 
 }
-.navigation-list {
-  list-style: none;
-  padding: 0; // Remove default padding
-  margin: 0; // Remove default margin
-
-  li {
-    margin-bottom: 20px; // Adjust this value to control the gap between list items
-  }
-  .small-icon {
-    width: 20px;
-    height: 20px;
-  }
-    .main-content {
-      flex: 1;
-      padding: 20px;
-    }
-      .large-text {
-        font-size: 24px;
-        font-weight: bold;
-        margin-left: 4rem;
-        
-      }
-    }

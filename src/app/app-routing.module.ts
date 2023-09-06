@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'calender',component:CalenderComponent,canActivate:[AuthGuard]},
   {path:'employee-details',component:EmployeeDetailsComponent,canActivate:[AuthGuard]},
   {path:'personal-details',component:PersonalDetailsComponent,canActivate:[AuthGuard]},
+ 
   {path:'about',component:AboutComponent,canActivate:[AuthGuard]},
   {path:'logout',component:LoginComponent,canActivate:[AuthGuard]},
   {path:'logout-dialog',component:LogoutDialogComponent,canActivate:[AuthGuard]},

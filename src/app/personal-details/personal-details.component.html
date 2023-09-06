@@ -2,53 +2,75 @@
 <div class="card">
     <div class="card-body">
         <h1>Personal Details</h1>
-        <form>
-            <div class="form-row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
+       <form>
+          <div class="row mb-3">
+            <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
+            <div class="col-sm-10">
+              <input type="Name" class="form-control" id="inputName">
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Personal Email</label>
+            <div class="col-sm-10">
+              <input type="Email" class="form-control" id="inputEmail3">
+            </div>
+          </div>
+          
+
+
+          <div class="row mb-3">
+            <label for="inputDate" class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-4">
+              <div class="input-group date" data-provide="datepicker">
+                <input type="text" class="form-control" id="inputDate" placeholder="Choose a date" aria-describedby="datePickerIcon">
+                <div class="input-group-append" id="datePickerIcon">
+                  <span class="input-group-text">
+                    <i class="far fa-calendar"></i>
+                  </span>
+                </div>
               </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                </div>
+          </div>
+          
+          <div class="row mb-3">
+            <label for="inputMobile 3" class="col-sm-2 col-form-label">Mobile Number</label>
+            <div class="col-sm-10">
+              <input type="Mobile" class="form-control" id="inputMobile3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputBloodgroup3" class="col-sm-2 col-form-label">Blood group</label>
+            <div class="col-sm-10">
+              <input type="Bloodgroup" class="form-control" id="inputloodgroup3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputAddress3" class="col-sm-2 col-form-label">Permanent Address</label>
+            <div class="col-sm-10">
+              <input type="Address" class="form-control" id="inputAddress3">
+            </div>
+          </div>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Male
+                </label>
               </div>
-              <div class="form-group">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                 Female
+                </label>
               </div>
-              <div class="form-group">
-                <label for="inputAddress2">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputCity">City</label>
-                  <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="inputZip">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-              </div>
-            
-              <button type="submit" class="btn btn-primary">Sign in</button>
-          </form>
+            </div>
+          </fieldset>
+         
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </div>
 </div>
