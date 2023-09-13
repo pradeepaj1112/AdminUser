@@ -7,23 +7,21 @@ import { FormsModule } from '@angular/forms';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
-  // let fixture: ComponentFixture<RegisterComponent>;
+  
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RegisterComponent],
-      providers: [AuthService], // Provide AuthService here if required
+      providers: [AuthService],
       imports: [HttpClientTestingModule, FormsModule],
     });
-    // fixture = TestBed.createComponent(RegisterComponent);
-    // component = fixture.componentInstance;
-    // fixture.detectChanges();
+
   });
 
   it('should create', () => {
     const fixture = TestBed.createComponent(RegisterComponent);
     const component = fixture.componentInstance;
-    // console.log(component); 
+    
     expect(component).toBeTruthy();
   });
   

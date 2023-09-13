@@ -1,4 +1,4 @@
-// Add this code to your component's SCSS file or a separate SCSS file
+
 
 .container {
     display: flex;
@@ -23,7 +23,7 @@
   
           label {
             font-weight: bold;
-            margin-right: 140px; // Add left margin to the labels
+            margin-right: 140px; 
           }
   
           input.form-control,
@@ -49,8 +49,8 @@
           justify-content: space-between;
   
           .form-group {
-            width: calc(50% - 8px); // Adjust spacing
-            margin-bottom: 10px;    // Add some space between form groups
+            width: calc(50% - 8px); 
+            margin-bottom: 10px;   
           }
         }
   

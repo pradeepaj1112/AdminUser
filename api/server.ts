@@ -38,7 +38,7 @@ app.post('/login', (req: any, res: any) => {
       const jwtData = jwt.sign({}, 'your-secret-key', {
         expiresIn: '60s',
         subject: username
-    })
+      })
       res.status(200).json({ message: 'User Authenticated successfully', data: jwtData })
     } else {
       res.status(401).json({ message: 'Invalid credentials', data: null });
@@ -49,7 +49,7 @@ app.post('/login', (req: any, res: any) => {
 });
 
 app.post('/register', (req: any, res: any) => {
-  const { name,username, password,position } = req.body;
+  const { name, username, password, position } = req.body;
   const rawdata = fs.readFileSync('api/database/db.json');
   const data: any = JSON.parse(rawdata);
   data.auth.push({
@@ -60,13 +60,41 @@ app.post('/register', (req: any, res: any) => {
   })
   fs.writeFile('api/database/db.json', JSON.stringify(data), (err: any) => {
 
-  
+
     if (err) {
       res.status(500).json({ message: 'Internal Error' });
     }
     res.status(200).json({ message: 'Registered successfully' })
   });
 });
+
+
+app.post('/personal-details', (req: any, res: any) => {
+  const { fullName, EmailAddress, dateOfBirth, gender, fathename, mobilenumber, department, bloodgroup, address } = req.body;
+  const rawData = fs.readFileSync('api/database/employeedata.json');
+  const data = JSON.parse(rawData);
+
+  data.auth.push({
+    fullName,
+    EmailAddress,
+    dateOfBirth,
+    gender,
+    fathename,
+    mobilenumber,
+    department,
+    bloodgroup,
+    address,
+  });
+
+  // Write updated data back to employeedata.json
+  fs.writeFile('api/database/employeedata.json', JSON.stringify(data), (err:any) => {
+    if (err) {
+      res.status(500).json({ message: 'Internal Error' });
+    }
+    res.status(200).json({ message: 'Data saved successfully' });
+  });
+});
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

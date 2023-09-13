@@ -7,11 +7,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatButtonModule } from '@angular/material/button'; 
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
-import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Service/auth.service';
 import { DatePipe } from '@angular/common';
@@ -29,8 +29,11 @@ import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
 import { FooterComponent } from './footer/footer.component';
-import { MatDatepickerModule } from '@angular/material/datepicker'; // Import for date picker
+import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeeDataFormComponent } from './employee-data-form/employee-data-form.component';
+
 
 @NgModule({
   declarations: [
@@ -47,8 +50,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     LogoutDialogComponent,
     AboutComponent,
     FooterComponent,
-
+    EmployeeDataFormComponent,
  
+
 
   ],
   imports: [
@@ -56,11 +60,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
-    FormsModule,
+  
     MatCardModule, 
     MatInputModule, 
     MatButtonModule ,
-    ReactiveFormsModule,
     HttpClientModule,
     IonicModule,
     MatDialogModule,
@@ -70,6 +73,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
     
   ],
   providers: [
@@ -78,6 +83,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AuthGuard,
   
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

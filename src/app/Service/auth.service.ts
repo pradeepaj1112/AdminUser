@@ -31,6 +31,10 @@ export class AuthService {
     this.isAuthenticated = false
     localStorage.removeItem('access_token');
   }
+  personaldetails(data: any) {
+    return this.http.post("http://localhost:3000/personal-details", data);
+  }
+
   
  
 

@@ -1,76 +1,106 @@
 <div class="container">
-<div class="card">
+  <div class="card">
     <div class="card-body">
-        <h1>Personal Details</h1>
-       <form>
-          <div class="row mb-3">
-            <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
-            <div class="col-sm-10">
-              <input type="Name" class="form-control" id="inputName">
+      <h1>Personal Details</h1>
+      <form >
+        <div class="row mb-3">
+          <label for="inputName3" class="col-sm-2 col-form-label">Full Name</label>
+          <div class="col-sm-10">
+            <input type="Name" class="form-control" id="inputName" name="FullName" required/>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Personal Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" name="EmailAddress" (input)="validateInput()" [class.is-invalid]="validateInputError"
+        required />
+        <div *ngIf="validateInputerror" class="invalid-feedback">
+          Invalid Input
+        </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputDate3" class="col-sm-2 col-form-label">Date of Birth</label>
+          <div class="col-sm-4">
+            <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+              <input type="Date" class="form-control" id="inputDate" placeholder="Choose a date"
+                aria-describedby="datePickerIcon" required>
+              <div class="input-group-append" id="date">
+
+              </div>
             </div>
           </div>
-          
-          <div class="row mb-3">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Personal Email</label>
-            <div class="col-sm-10">
-              <input type="Email" class="form-control" id="inputEmail3">
-            </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputName3" class="col-sm-2 col-form-label">Father Name</label>
+          <div class="col-sm-10">
+            <input type="Name" class="form-control" id="inputFatherName" name="FatherName" required/>
           </div>
-          
+        </div>
+        <div class="row mb-3">
+          <label for="inputMobile3" class="col-sm-2 col-form-label">Mobile Number</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputMobile3" formControlName="inputMobile3" required/>
+          </div>
+        </div>
 
 
-          <div class="row mb-3">
-            <label for="inputDate" class="col-sm-2 col-form-label">Date of Birth</label>
-            <div class="col-sm-4">
-              <div class="input-group date" data-provide="datepicker">
-                <input type="text" class="form-control" id="inputDate" placeholder="Choose a date" aria-describedby="datePickerIcon">
-                <div class="input-group-append" id="datePickerIcon">
-                  <span class="input-group-text">
-                    <i class="far fa-calendar"></i>
-                  </span>
-                </div>
-              </div>
+        <div class="row mb-3">
+          <label for="inputDepartment3" class="col-sm-2 col-form-label">Department</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="inputDepartment3" formControlName="Department" name="Department" required>
+              <option value="">Select Department</option>
+              <option value="Product Engineering">Product Engineering</option>
+              <option value="Data Analytics & AI">Data Analytics & AI</option>
+              <option value="ServiceNow">ServiceNow</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputBloodgroup3" class="col-sm-2 col-form-label">Blood group</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="inputBloodgroup3" formControlName="bloodgroup" required>
+              <option value="">Select Bloodgroup</option>
+              <option value="A+">A+</option>
+              <option value="B+">B+</option>
+              <option value="O">O</option>
+              <option value="AB">AB</option>
+              <option value="B-">B-</option>
+              <option value="A-">A-</option>
+              <!-- Add more blood group options as needed -->
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputAddress3" class="col-sm-2 col-form-label"> Address</label>
+          <div class="col-sm-10">
+            <input type="Address" class="form-control" id="inputAddress3" required/>
+          </div>
+        </div>
+
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Female
+              </label>
             </div>
           </div>
-          
-          <div class="row mb-3">
-            <label for="inputMobile 3" class="col-sm-2 col-form-label">Mobile Number</label>
-            <div class="col-sm-10">
-              <input type="Mobile" class="form-control" id="inputMobile3">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputBloodgroup3" class="col-sm-2 col-form-label">Blood group</label>
-            <div class="col-sm-10">
-              <input type="Bloodgroup" class="form-control" id="inputloodgroup3">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputAddress3" class="col-sm-2 col-form-label">Permanent Address</label>
-            <div class="col-sm-10">
-              <input type="Address" class="form-control" id="inputAddress3">
-            </div>
-          </div>
-          <fieldset class="row mb-3">
-            <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                 Female
-                </label>
-              </div>
-            </div>
-          </fieldset>
-         
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </fieldset>
+        <button type="submit" class="btn btn-primary" (click)="submit()"[disabled]="validateInputError">Submit</button>
+      </form>
+    
+      </div>
     </div>
-</div>
-</div>
+  </div>
+

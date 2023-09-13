@@ -11,7 +11,7 @@ export class EmployeeDashboardComponent {
   currentTime: string='';
   constructor( private datepipe:DatePipe,private dialog: MatDialog) {
     this.updateTime(); 
-    setInterval(() => this.updateTime(), 1000);
+    // setInterval(() => this.updateTime(), 1000);
   }
 
   updateTime() {

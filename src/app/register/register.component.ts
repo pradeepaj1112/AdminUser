@@ -48,13 +48,11 @@ export class RegisterComponent {
         alert(error.error.message);
       });
   }
-  // onEmployeeIdInput() {
-  //   this.employeeIdError = !/^\d*$/.test(this.EmployeeId);
-  // }
+  
   validateInput() {
     const gmailPattern = /.+@gmail\.com/;
     this.validateInputerror = !gmailPattern.test(this.EmailAddress);
-    //this.isInvalidInput = email.toLowerCase().includes('admin');
+    
   }
   
 }

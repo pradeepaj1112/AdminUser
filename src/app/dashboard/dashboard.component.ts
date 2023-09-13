@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LogoutDialogComponent } from '../logout-dialog/logout-dialog.component';
 import { Router } from '@angular/router';
 
-// Import any necessary components or services here
+
 
 @Component({
   selector: 'app-dashboard',
@@ -24,11 +24,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // Any initialization code you need
+
   }
 
   ngOnDestroy() {
-    // Any cleanup code you need when the component is destroyed
+
   }
     openLogoutDialog(): void {
     const dialogRef = this.dialog.open(LogoutDialogComponent);
